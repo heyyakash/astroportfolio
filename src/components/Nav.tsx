@@ -9,12 +9,11 @@ export default function Nav() {
         setMode(mode)
     }
     const date = (new Date()).toString().split(' ')
-    const day = date[0]
-    const time = date[4].split(":")
+    const day =` ${date[0]} ${date[1]} ${date[2]}`
     return (
         <nav className="w-full h-[70px]">
-            <div className="container-screen w-full h-full flex items-center justify-between">
-                <p className="text-sec font-semibold uppercase">{day} {time[0]+":"+time[1]}</p>
+            <div className="container-screen w-full h-full flex items-center text-xs justify-between">
+                <p className="text-sec font-semibold uppercase">{day}</p>
                 
                 <div className="flex gap-4 font-semibold">
                     <div onClick={() => changeMode("light")} className={`nav-links ${mode==="light"?"text-black":""}`}>
