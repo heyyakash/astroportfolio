@@ -16,7 +16,7 @@ interface props {
 
 const ProjectBox: FC<props> = ({ image, github, link, name, desc }) => {
   return (
-    <div className=" lg:w-[900px] relative h-[300px] md:h-[500px] border-[1px] border-white/20 rounded-sm">
+    <div className=" lg:w-[900px] relative h-[300px] md:h-[500px] rounded-sm">
       <div className="absolute p-4 w-full h-full top-0 left-0 bg-gradient-to-t dark:from-black to-transparent z-10 flex justify-between items-end">
         <p className="bg-white text-black py-1 px-2 rounded-md font-semibold text-sm">{name}</p>
         <div className="flex gap-2 ">
