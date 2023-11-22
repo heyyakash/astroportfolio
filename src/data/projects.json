@@ -4,27 +4,27 @@
       "link": "https://voxvideocall.vercel.app/",
       "name": "Vox",
       "desc": "",
-      "image": "/vox.png"
+      "image": "/vox.webp"
     },
     {
       "github": "https://github.com/heyyakash/fullstackchatapp",
       "link": "https://fullstackchatapp.vercel.app/",
       "name": "Chat Application",
       "desc": "",
-      "image": "/chat.png"
+      "image": "/chat.webp"
     },
     {
       "github": "https://github.com/heyyakash/CollaborationTool",
       "link": "https://collaboration-tool.vercel.app/",
       "name": "Collabwrite",
       "desc": "",
-      "image": "/collabwrite.png"
+      "image": "/collabwrite.webp"
     },
     {
       "github": "https://github.com/heyyakash/ProjectMgmt",
       "link": "https://progressify.vercel.app/",
       "name": "Progressify",
       "desc": "",
-      "image": "/progresssify.png"
+      "image": "/progresssify.webp"
     }
   ]

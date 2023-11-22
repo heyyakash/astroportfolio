@@ -64,8 +64,8 @@ const Projects = () => {
         >
           {projectList.map((x, y) => {
             return (
-              <SwiperSlide>
-                <ProjectBox name={x.name} desc={x.desc} key={y} image={x.image} github={x.github} link={x.github} />
+              <SwiperSlide key={y}>
+                <ProjectBox name={x.name} desc={x.desc}  image={x.image} github={x.github} link={x.github} />
               </SwiperSlide>
             )
           })}
