@@ -16,7 +16,7 @@ interface props {
 
 const ProjectBox: FC<props> = ({ image, github, link, name, desc }) => {
   return (
-    <div className="w-full lg:w-[900px] relative h-[300px] md:h-[500px] border-[1px] border-white/20 rounded-sm">
+    <div className=" lg:w-[900px] relative h-[300px] md:h-[500px] border-[1px] border-white/20 rounded-sm">
       <div className="absolute p-4 w-full h-full top-0 left-0 bg-gradient-to-t dark:from-black to-transparent z-10 flex justify-between items-end">
         <p className="bg-white text-black py-1 px-2 rounded-md font-semibold text-sm">{name}</p>
         <div className="flex gap-2 ">
@@ -35,18 +35,22 @@ const ProjectBox: FC<props> = ({ image, github, link, name, desc }) => {
 const Projects = () => {
 
   return (
-    <section className="lg:my-[4.5rem]">
+    <section className="mb-10 lg:my-[4.5rem]">
       <div className="w-full text-white">
         <Swiper
-          spaceBetween={800}
+          
           loop={true}
           slidesPerView={3}
-          onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
           breakpoints={{
+            320:{
+              slidesPerView:1,
+              spaceBetween:0
+            },
             640: {
-              slidesPerView: 1,
-              spaceBetween: 0
+              slidesPerView: 2,
+              spaceBetween: 0,
+            
             },
             768: {
               slidesPerView: 1,
@@ -54,7 +58,7 @@ const Projects = () => {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 800,
+              spaceBetween: 820,
             },
           }}
         >
