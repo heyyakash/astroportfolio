@@ -3,14 +3,16 @@
 import Layout from "../layouts/Layout.astro";
 // import Hero from "../components/Hero";
 import Intro from "../components/Intro";
-import Social from "../components/Social"
-import Section from "../components/Section"
-import Projects from "../components/Projects"
+import Social from "../components/Social";
+import Section from "../components/Section";
+import Projects from "../components/Projects";
 ---
 
 <Layout title="Akash Sharma | Portfolio">
 	<Intro />
 	<Social />
-	<Section title="Projects"><></></Section>
+	<Section title="Projects">
+		<></>
+	</Section>
 	<Projects client:visible />
 </Layout>
