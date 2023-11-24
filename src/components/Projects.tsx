@@ -38,8 +38,8 @@ const Projects = () => {
     <section className="mb-10 lg:my-[3.7rem]">
       <div className="w-full text-white">
         <Swiper
-          slidesPerView={3}
-          spaceBetween={10}
+          // slidesPerView={3}
+          // spaceBetween={10}
           loop
           pagination={{
             clickable: true,
@@ -47,11 +47,11 @@ const Projects = () => {
           breakpoints={{
             640: {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 0,
             },
             768: {
               slidesPerView: 1,
-              spaceBetween: 10,
+              spaceBetween: 0,
             },
             1024: {
               slidesPerView: 3,
@@ -59,11 +59,11 @@ const Projects = () => {
             },
           }}
           // modules={[Pagination]}
-          className="mySwiper"
+          // className="mySwiper"
         >
           {projectList.map((x, y) => {
             return (
-              <SwiperSlide className=" lg:!w-[900px]  !w-full" key={y}>
+              <SwiperSlide className="lg:!w-[900px] !w-full" key={y}>
                 {/* SLide 1 */}
                 <ProjectBox name={x.name} desc={x.desc} image={x.image} github={x.github} link={x.github} />
               </SwiperSlide>
@@ -71,40 +71,7 @@ const Projects = () => {
           })}
 
         </Swiper>
-        {/* <Swiper
-          
-          loop={true}
-          slidesPerView={3}
-          onSwiper={(swiper) => console.log(swiper)}
-          breakpoints={{
-            320:{
-              slidesPerView:1,
-              spaceBetween:0
-            },
-            640: {
-              slidesPerView: 2,
-              spaceBetween: 0,
-            
-            },
-            768: {
-              slidesPerView: 1,
-              spaceBetween: 0,
-            },
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 820,
-            },
-          }}
-        >
-          {projectList.map((x, y) => {
-            return (
-              <SwiperSlide key={y}>
-                <ProjectBox name={x.name} desc={x.desc}  image={x.image} github={x.github} link={x.github} />
-              </SwiperSlide>
-            )
-          })}
-        </Swiper> */}
-
+      
       </div>
     </section>
   )
