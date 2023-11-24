@@ -35,7 +35,7 @@ const ProjectBox: FC<props> = ({ image, github, link, name, desc }) => {
 const Projects = () => {
 
   return (
-    <section className="mb-10 lg:my-[3.7rem]">
+    <section className=" lg:mt-[3.7rem] -mt-5">
       <div className="w-full text-white">
         <Swiper
           // slidesPerView={3}
@@ -58,13 +58,11 @@ const Projects = () => {
               spaceBetween: 10,
             },
           }}
-          // modules={[Pagination]}
-          // className="mySwiper"
         >
           {projectList.map((x, y) => {
             return (
               <SwiperSlide className="lg:!w-[900px] !w-full" key={y}>
-                {/* SLide 1 */}
+
                 <ProjectBox name={x.name} desc={x.desc} image={x.image} github={x.github} link={x.github} />
               </SwiperSlide>
             )
