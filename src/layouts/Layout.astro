@@ -39,27 +39,6 @@ const { title } = Astro.props;
 	@tailwind components;
 	@tailwind utilities;
 
-	.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  /* min-width: 900px !important; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 	body {
 		font-family: "Inter", sans-serif;
 	}
@@ -85,6 +64,12 @@ const { title } = Astro.props;
 		}
 		.btn-project {
 			@apply p-1 bg-white text-black text-xl rounded-md;
+		}
+		.dark-text-l{
+			@apply dark:text-white/60 text-black/60;
+		}
+		.dark-text{
+			@apply dark:text-white text-black;
 		}
 	}
 </style>

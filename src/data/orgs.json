@@ -1,0 +1,21 @@
+[
+    {
+        "position": "Frontend Developer Intern",
+        "org": "CFT Labs",
+        "duration": "Jul 23 - Sep 23",
+        "contribution": [
+            "Created a website for a Sports club from scratch using NextJS and TypeScript.",
+            "Made responsive wesbite and integrated REST APIs using React Query."
+        ]
+    },
+    {
+        "position": "Full Stack Developer Intern",
+        "org": "Hackdev Technologies Pvt. ltd",
+        "duration": "Sep 22 - Dec 22",
+        "contribution": [
+            "Contributed to Codesnag CRM, managing both frontend and backend development utilizing ReactJs and Node.js.",
+            "Improved the Hackershala E-Learning Platform by integrating course videos, implementing a paywall system.",
+            "Developed a Cyber Complaint Monitor web application for schools, creating a Vite/React frontend, Node.js backend"
+        ]
+    }
+]
