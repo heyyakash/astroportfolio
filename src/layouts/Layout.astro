@@ -36,43 +36,60 @@ import { ViewTransitions } from "astro:transitions";
 			<slot />
 		</div>
 		<Footer />
-	</body><style is:global>
-		@tailwind base;
-		@tailwind components;
-		@tailwind utilities;
+		<style is:global>
+			@tailwind base;
+			@tailwind components;
+			@tailwind utilities;
 
-		body {
-			font-family: "Inter", sans-serif;
-		}
 
-		@layer base {
-			h3 {
-				@apply text-2xl font-semibold;
+			::-webkit-scrollbar {
+				width: 5px;
 			}
-			html {
-				@apply scroll-smooth;
-			}
-			body {
-				@apply dark:bg-primary bg-white;
-			}
-		}
 
-		@layer components {
-			.nav-links {
-				@apply text-sec cursor-pointer flex items-center gap-1;
+			/* Track */
+			::-webkit-scrollbar-track {
+				background: transparent;
 			}
-			.container-screen {
-				@apply max-w-[850px] px-4 lg:px-0 w-full mx-auto;
+
+			/* Handle */
+			::-webkit-scrollbar-thumb {
+				background: #888;
 			}
-			.btn-project {
-				@apply p-1 bg-white text-black text-xl rounded-md;
+
+			/* Handle on hover */
+			::-webkit-scrollbar-thumb:hover {
+				background: #555;
 			}
-			.dark-text-l {
-				@apply dark:text-white/60 text-black/60;
+
+			@layer base {
+				h3 {
+					@apply text-2xl font-semibold;
+				}
+				html {
+					@apply scroll-smooth;
+				}
+				body {
+					@apply dark:bg-primary bg-white;
+				}
 			}
-			.dark-text {
-				@apply dark:text-white text-black;
+
+			@layer components {
+				.nav-links {
+					@apply text-sec cursor-pointer flex items-center gap-1;
+				}
+				.container-screen {
+					@apply max-w-[850px] px-4 lg:px-0 w-full mx-auto;
+				}
+				.btn-project {
+					@apply p-1 bg-white text-black text-xl rounded-md;
+				}
+				.dark-text-l {
+					@apply dark:text-white/60 text-black/60;
+				}
+				.dark-text {
+					@apply dark:text-white text-black;
+				}
 			}
-		}
-	</style>
+		</style>
+	</body>
 </html>

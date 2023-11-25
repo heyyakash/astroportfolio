@@ -35,7 +35,7 @@ const ProjectBox: FC<props> = ({ image, github, link, name, desc }) => {
 const Projects = () => {
 
   return (
-    <section className=" lg:mt-[5rem] -mt-5">
+    <section className=" lg:mt-[4rem] -mt-5">
       <div className="w-full text-white">
         <Swiper
           loop
