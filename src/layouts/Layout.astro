@@ -3,11 +3,12 @@ interface Props {
 	title: string;
 }
 
-import Nav from "../components/Nav"
-import Hero from "../components/Hero"
-import LowerNav from "../components/LowerNav"
-import Footer from "../components/Footer"
+import Nav from "../components/Nav";
+import Hero from "../components/Hero";
+import LowerNav from "../components/LowerNav";
+import Footer from "../components/Footer";
 const { title } = Astro.props;
+import { ViewTransitions } from "astro:transitions";
 ---
 
 <!doctype html>
@@ -25,51 +26,53 @@ const { title } = Astro.props;
 		/>
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<ViewTransitions />
 	</head>
 	<body>
 		<Nav client:load />
 		<Hero />
-		<LowerNav client:load/>
-		<slot />
-		<Footer />	
-	</body>
-</html>
-<style is:global>
-	@tailwind base;
-	@tailwind components;
-	@tailwind utilities;
+		<LowerNav client:load />
+		<div transition:animate="slide">
+			<slot />
+		</div>
+		<Footer />
+	</body><style is:global>
+		@tailwind base;
+		@tailwind components;
+		@tailwind utilities;
 
-	body {
-		font-family: "Inter", sans-serif;
-	}
-
-	@layer base {
-		h3 {
-			@apply text-2xl font-semibold;
-		}
-		html {
-			@apply scroll-smooth;
-		}
 		body {
-			@apply dark:bg-primary bg-white;
+			font-family: "Inter", sans-serif;
 		}
-	}
 
-	@layer components {
-		.nav-links {
-			@apply text-sec cursor-pointer flex items-center gap-1;
+		@layer base {
+			h3 {
+				@apply text-2xl font-semibold;
+			}
+			html {
+				@apply scroll-smooth;
+			}
+			body {
+				@apply dark:bg-primary bg-white;
+			}
 		}
-		.container-screen {
-			@apply max-w-[850px] px-4 lg:px-0 w-full mx-auto;
+
+		@layer components {
+			.nav-links {
+				@apply text-sec cursor-pointer flex items-center gap-1;
+			}
+			.container-screen {
+				@apply max-w-[850px] px-4 lg:px-0 w-full mx-auto;
+			}
+			.btn-project {
+				@apply p-1 bg-white text-black text-xl rounded-md;
+			}
+			.dark-text-l {
+				@apply dark:text-white/60 text-black/60;
+			}
+			.dark-text {
+				@apply dark:text-white text-black;
+			}
 		}
-		.btn-project {
-			@apply p-1 bg-white text-black text-xl rounded-md;
-		}
-		.dark-text-l{
-			@apply dark:text-white/60 text-black/60;
-		}
-		.dark-text{
-			@apply dark:text-white text-black;
-		}
-	}
-</style>
+	</style>
+</html>
