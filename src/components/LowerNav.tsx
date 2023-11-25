@@ -4,7 +4,6 @@ const LowerNav = () => {
     const [location,setLocation] = useState<null | string>(null)
     useEffect(()=>{
         let current = window.location.pathname
-        console.log(current)
         setLocation(current)
     },[])
     return (

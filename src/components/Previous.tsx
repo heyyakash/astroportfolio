@@ -10,7 +10,7 @@ const Previous = () => {
           {data.map((job, index) => {
             return (
               <div key={index} className="my-3">
-                <h4 className="text-lg "><b className="dark:text-white">{job.position}</b> <span>at</span> <b className="dark:text-white">{job.org}</b></h4>
+                <h4 className="dark-text-l"><b className="dark-text font-medium">{job.position}</b> <span>at</span> <b className="dark-text font-medium">{job.org}</b></h4>
                 {job.contribution.map((contri, i)=>{
                   return(
                     <p key = {i}>{"->"} {contri}</p>

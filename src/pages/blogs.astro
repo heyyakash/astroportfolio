@@ -1,7 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro"
+import Blog from "../components/Blogs";
+import Section from "../components/Section"
+import {fetchBlogs} from "../functions/fetchblogs"
+const data = await fetchBlogs()
+
 ---
 
 <Layout title="Akash Sharma | Blogs">
-    Hi
+    <Section title="Blogs">
+    <Blog data = {data}>
+    </Section>
 </Layout>
