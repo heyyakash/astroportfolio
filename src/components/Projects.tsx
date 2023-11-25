@@ -61,7 +61,7 @@ const Projects = () => {
             return (
               <SwiperSlide className="lg:!w-[850px] !w-full" key={y}>
 
-                <ProjectBox name={x.name} desc={x.desc} image={x.image} github={x.github} link={x.github} />
+                <ProjectBox name={x.name} desc={x.desc} image={x.image} github={x.github} link={x.link} />
               </SwiperSlide>
             )
           })}
