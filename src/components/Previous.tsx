@@ -4,9 +4,9 @@ import data from "../data/orgs.json"
 const Previous = () => {
   return (
     <>
-      <div className="mt-5"></div>
+      {/* <div className=""></div> */}
       <Section title="Orgs">
-        <div className="dark:text-white/70 -mt-2 lg:mt-2">
+        <div className="dark:text-white/70 -mt-2">
           {data.map((job, index) => {
             return (
               <div key={index} className="my-3">
